@@ -2,6 +2,7 @@ package me.zhangjin.study;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
@@ -13,6 +14,8 @@ import org.springframework.web.client.RestTemplate;
 // 通过 @EnableDiscoveryClient 注解让该应用注册为 Eureka 客户端应用
 // 以获得服务发现的能力
 @EnableDiscoveryClient
+// 开启断路器功能
+@EnableCircuitBreaker
 @SpringBootApplication
 public class ConsumerApplication {
 
