@@ -17,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 // 开启断路器功能
 @EnableCircuitBreaker
 @SpringBootApplication
-public class ConsumerApplication {
+public class RibbonConsumerApplication {
 
     @Bean
     // 通过 @LoadBalanced 注解开启客户端的负载均衡
@@ -27,6 +27,6 @@ public class ConsumerApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(ConsumerApplication.class, args);
+        SpringApplication.run(RibbonConsumerApplication.class, args);
     }
 }

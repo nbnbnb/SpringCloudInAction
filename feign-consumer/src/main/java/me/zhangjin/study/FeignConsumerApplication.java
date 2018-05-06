@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Bean;
 @EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication
-public class ConsumerApplication {
+public class FeignConsumerApplication {
 
     /**
      * Feign 客户端默认的 Logger.Level 对象定义为 NONE 级别，该级别不会记录任何 Feign 调用过程中的信息'
@@ -29,7 +29,7 @@ public class ConsumerApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(ConsumerApplication.class, args);
+        SpringApplication.run(FeignConsumerApplication.class, args);
     }
 
 }

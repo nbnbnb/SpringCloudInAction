@@ -30,7 +30,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>1.3.7.RELEASE</version>
                 <configuration>
-                    <mainClass>me.zhangjin.study.Application</mainClass>
+                    <mainClass>me.zhangjin.study.EurekaServerApplication</mainClass>
                     <layout>ZIP</layout>
                 </configuration>
                 <executions>
