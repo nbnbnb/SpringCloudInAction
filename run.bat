@@ -14,4 +14,6 @@ start cmd /k "java -jar ./ribbon-consumer/target/ribbon-consumer-1.0-SNAPSHOT.ja
 start cmd /k "java -jar ./api-gateway/target/api-gateway-1.0-SNAPSHOT.jar"
 
 start cmd /k "java -jar ./config-server/target/config-server-1.0-SNAPSHOT.jar"
+rem 客户端启动时，Eureka 还没初始化完成，应用会报错，初始化完成后手动启动
+rem 客户端添加 retry 功能，可以排除这个问题
 start cmd /k "java -jar ./config-client/target/config-client-1.0-SNAPSHOT.jar"
