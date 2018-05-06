@@ -10,3 +10,5 @@ rem http://localhost:9001/feign-consumer http://localhost:9001/feign-consumer2 h
 start cmd /k "java -jar ./feign-consumer/target/feign-consumer-1.0-SNAPSHOT.jar"
 rem http://localhost:9000/ribbon-consumer
 start cmd /k "java -jar ./ribbon-consumer/target/ribbon-consumer-1.0-SNAPSHOT.jar"
+
+start cmd /k "java -jar ./api-gateway/target/api-gateway-1.0-SNAPSHOT.jar"
