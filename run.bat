@@ -1,7 +1,9 @@
 rem mvn clean compile package && java -jar ./eureka-server/target/eureka-server-1.0-SNAPSHOT.jar --spring.profiles.active=peer1 & java -jar ./eureka-server/target/eureka-server-1.0-SNAPSHOT.jar --spring.profiles.active=peer2
 
-start cmd /k "java -jar ./eureka-server/target/eureka-server-1.0-SNAPSHOT.jar --spring.profiles.active=peer1"
-start cmd /k "java -jar ./eureka-server/target/eureka-server-1.0-SNAPSHOT.jar --spring.profiles.active=peer2"
+start cmd /k "java -jar ./eureka-server/target/eureka-server-1.0-SNAPSHOT.jar
+rem 高可用方案
+rem start cmd /k "java -jar ./eureka-server/target/eureka-server-1.0-SNAPSHOT.jar --spring.profiles.active=peer1"
+rem start cmd /k "java -jar ./eureka-server/target/eureka-server-1.0-SNAPSHOT.jar --spring.profiles.active=peer2"
 
 rem start cmd /k "java -jar ./hello-service/target/hello-service-1.0-SNAPSHOT.jar --server.port=8011"
 rem start cmd /k "java -jar ./hello-service/target/hello-service-1.0-SNAPSHOT.jar --server.port=8012"
