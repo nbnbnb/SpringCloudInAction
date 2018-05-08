@@ -19,6 +19,7 @@ public class SinkReceiver {
 
     @StreamListener(Sink.INPUT)
     public void receive(Object payload) {
+        // 在 RabbitMQ 的名为 "input" 的 Exchange 中发送消息
         logger.info("Received: " + payload);
     }
 
