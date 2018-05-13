@@ -1,6 +1,6 @@
 rem mvn clean compile package && java -jar ./eureka-server/target/eureka-server-1.0-SNAPSHOT.jar --spring.profiles.active=peer1 & java -jar ./eureka-server/target/eureka-server-1.0-SNAPSHOT.jar --spring.profiles.active=peer2
 
-start cmd /k "java -jar ./eureka-server/target/eureka-server-1.0-SNAPSHOT.jar
+rem start cmd /k "java -jar ./eureka-server/target/eureka-server-1.0-SNAPSHOT.jar
 rem 高可用方案
 rem start cmd /k "java -jar ./eureka-server/target/eureka-server-1.0-SNAPSHOT.jar --spring.profiles.active=peer1"
 rem start cmd /k "java -jar ./eureka-server/target/eureka-server-1.0-SNAPSHOT.jar --spring.profiles.active=peer2"
@@ -20,3 +20,7 @@ rem 客户端启动时，Eureka 还没初始化完成，应用会报错，初始
 rem 客户端添加 retry 功能，可以排除这个问题
 rem start cmd /k "java -jar ./config-client/target/config-client-1.0-SNAPSHOT.jar --server.port=7002"
 rem start cmd /k "java -jar ./config-client/target/config-client-1.0-SNAPSHOT.jar --server.port=7003"
+
+start cmd /k "java -jar ./stream-producer/target/stream-producer-1.0-SNAPSHOT.jar"
+start cmd /k "java -jar ./stream-consumer/target/stream-consumer-1.0-SNAPSHOT.jar --spring.cloud.stream.instanceIndex=0"
+start cmd /k "java -jar ./stream-consumer/target/stream-consumer-1.0-SNAPSHOT.jar --spring.cloud.stream.instanceIndex=1"

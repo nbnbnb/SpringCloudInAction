@@ -44,8 +44,15 @@ public class SinkSender {
     @InboundChannelAdapter(value = SinkOutput.OUTPUT, poller = @Poller(fixedDelay = "2000"))
     public MessageSource<String> timerMessageSource() {
         return () -> {
-            System.out.println("Starting Send data." + new Date().getTime());
-            return new GenericMessage<>("{\"name\":\"ZhangJin\", \"age\":30}");   // 中文乱码？？？
+            Long now = new Date().getTime();
+            System.out.println("Starting Send data." + now);
+            // 根据 payload 测试分区
+            if (now % 2 == 0) {
+                return new GenericMessage<>("{\"name\":\"ZhangJin\", \"age\":30}");
+            } else {
+                return new GenericMessage<>("{\"name\":\"张进\", \"age\":31}");   // 中文乱码？？？
+            }
+
         };
     }
 
