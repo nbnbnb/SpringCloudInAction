@@ -14,7 +14,7 @@ import org.springframework.cloud.stream.messaging.Sink;
 
 // 此注解用来指定一个或多个定义了 @Input 和 @Output 注解的接口，以此实现对消息通道（Channel）的绑定
 // Sink 接口是 Spring Cloud Stream 中默认实现的对“输入消息通道绑定”的定义
-@EnableBinding(Sink.class)
+@EnableBinding({Sink.class, SinkSender.class})
 public class SinkReceiver {
 
     private static Logger logger = LoggerFactory.getLogger(StreamHelloApplication.class);
