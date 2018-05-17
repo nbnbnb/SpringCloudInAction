@@ -27,3 +27,5 @@ rem start cmd /k "java -jar ./stream-consumer/target/stream-consumer-1.0-SNAPSHO
 
 start cmd /k "java -jar ./trace-1/target/trace-1-1.0-SNAPSHOT.jar"
 start cmd /k "java -jar ./trace-2/target/trace-2-1.0-SNAPSHOT.jar"
+
+start cmd /k "java -jar ./zipkin-server/target/zipkin-server-1.0-SNAPSHOT.jar"

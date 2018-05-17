@@ -26,6 +26,7 @@
         <module>stream-consumer</module>
         <module>trace-1</module>
         <module>trace-2</module>
+        <module>zipkin-server</module>
     </modules>
 
     <properties>
